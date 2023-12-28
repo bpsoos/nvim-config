@@ -20,3 +20,7 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 
+vim.opt.listchars = { tab = '>-', space = '␣' }
+vim.opt.list = true
+vim.g.python3_host_prog = vim.fn.expand('$HOME') .. '/.local/venv/nvim/bin/python'
+

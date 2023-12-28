@@ -21,3 +21,31 @@ vim.keymap.set("v", "<leader>Y", "\"+Y")
 
 vim.keymap.set("n", "Q", "<nop>")
 
+vim.keymap.set("n", "<leader>b", ":call Black()<CR>")
+
+vim.api.nvim_create_augroup("AutoFormat", {})
+
+vim.api.nvim_create_autocmd(
+    "BufWritePost",
+    {
+        pattern = "*.py",
+        group = "AutoFormat",
+        callback = function()
+            vim.cmd("call Black()")
+            vim.cmd("edit")
+        end,
+    }
+)
+
+vim.api.nvim_create_autocmd(
+    "BufWritePost",
+    {
+        pattern = "*.py",
+        group = "AutoFormat",
+        callback = function()
+            vim.cmd("Isort")
+            vim.cmd("edit")
+        end,
+    }
+)
+

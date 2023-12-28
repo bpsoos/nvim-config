@@ -79,10 +79,27 @@ _G.packer_plugins = {
     path = "/Users/bencepetersoos/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["black-nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25:UpdateRemotePlugins\bcmd\bvim\0" },
+    loaded = true,
+    path = "/Users/bencepetersoos/.local/share/nvim/site/pack/packer/start/black-nvim",
+    url = "https://github.com/averms/black-nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/bencepetersoos/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  harpoon = {
+    loaded = true,
+    path = "/Users/bencepetersoos/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["isort.nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25:UpdateRemotePlugins\bcmd\bvim\0" },
+    loaded = true,
+    path = "/Users/bencepetersoos/.local/share/nvim/site/pack/packer/start/isort.nvim",
+    url = "https://github.com/stsewd/isort.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -98,6 +115,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bencepetersoos/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/Users/bencepetersoos/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -137,6 +159,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: black-nvim
+time([[Config for black-nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25:UpdateRemotePlugins\bcmd\bvim\0", "config", "black-nvim")
+time([[Config for black-nvim]], false)
+-- Config for: isort.nvim
+time([[Config for isort.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25:UpdateRemotePlugins\bcmd\bvim\0", "config", "isort.nvim")
+time([[Config for isort.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

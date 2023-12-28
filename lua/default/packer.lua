@@ -22,5 +22,24 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},
 		}
 	}
+    use("EdenEast/nightfox.nvim")
+    use {
+        'averms/black-nvim',
+        config = function()
+            vim.cmd ':UpdateRemotePlugins'
+        end
+    }
+    use {
+        'stsewd/isort.nvim',
+        config = function()
+            vim.cmd ':UpdateRemotePlugins'
+        end
+    }
+    use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
 end)
 
