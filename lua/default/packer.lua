@@ -41,5 +41,8 @@ return require('packer').startup(function(use)
         branch = "harpoon2",
         requires = { {"nvim-lua/plenary.nvim"} }
     }
+    use 'ray-x/go.nvim'
+    use 'ray-x/guihua.lua'
+    use 'neovim/nvim-lspconfig'
 end)
 
