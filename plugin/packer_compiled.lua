@@ -161,22 +161,37 @@ _G.packer_plugins = {
     path = "/Users/bencepetersoos/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["refactoring.nvim"] = {
+    loaded = true,
+    path = "/Users/bencepetersoos/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
+    url = "https://github.com/ThePrimeagen/refactoring.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/bencepetersoos/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-abolish"] = {
+    loaded = true,
+    path = "/Users/bencepetersoos/.local/share/nvim/site/pack/packer/start/vim-abolish",
+    url = "https://github.com/tpope/vim-abolish"
+  },
+  ["vim-goimports"] = {
+    loaded = true,
+    path = "/Users/bencepetersoos/.local/share/nvim/site/pack/packer/start/vim-goimports",
+    url = "https://github.com/mattn/vim-goimports"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: isort.nvim
-time([[Config for isort.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25:UpdateRemotePlugins\bcmd\bvim\0", "config", "isort.nvim")
-time([[Config for isort.nvim]], false)
 -- Config for: black-nvim
 time([[Config for black-nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25:UpdateRemotePlugins\bcmd\bvim\0", "config", "black-nvim")
 time([[Config for black-nvim]], false)
+-- Config for: isort.nvim
+time([[Config for isort.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25:UpdateRemotePlugins\bcmd\bvim\0", "config", "isort.nvim")
+time([[Config for isort.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

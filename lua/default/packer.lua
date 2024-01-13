@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
 
 	use('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
 	use('nvim-treesitter/playground')
+	use('mattn/vim-goimports')
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
@@ -35,7 +36,7 @@ return require('packer').startup(function(use)
             vim.cmd ':UpdateRemotePlugins'
         end
     }
-    use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
+    use "nvim-lua/plenary.nvim"
     use {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
@@ -44,5 +45,13 @@ return require('packer').startup(function(use)
     use 'ray-x/go.nvim'
     use 'ray-x/guihua.lua'
     use 'neovim/nvim-lspconfig'
+    use {
+        "ThePrimeagen/refactoring.nvim",
+        requires = {
+            {"nvim-lua/plenary.nvim"},
+            {"nvim-treesitter/nvim-treesitter"}
+        }
+    }
+    use 'tpope/vim-abolish'
 end)
 
