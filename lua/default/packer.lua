@@ -7,6 +7,10 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+    use {
+         'folke/trouble.nvim',
+         requires = { { 'nvim-tree/nvim-web-devicons' } }
+    }
 
 	use('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
 	use('nvim-treesitter/playground')
@@ -53,5 +57,20 @@ return require('packer').startup(function(use)
         }
     }
     use 'tpope/vim-abolish'
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+    use {
+        'astral-sh/ruff-lsp',
+        requires = {
+            {'neovim/nvim-lspconfig'}
+        },
+    }
+    use {
+        'NoahTheDuke/vim-just'
+    }
 end)
 
