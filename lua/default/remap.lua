@@ -22,38 +22,3 @@ vim.keymap.set("v", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "Q", "<nop>")
 
 vim.keymap.set("n", "<leader>b", ":call Black()<CR>")
-
-vim.api.nvim_create_augroup("AutoFormat", {})
-
-vim.api.nvim_create_autocmd(
-    "BufWritePost",
-    {
-        pattern = "*.py",
-        group = "AutoFormat",
-        callback = function()
-            vim.cmd("call Black()")
-            vim.cmd("edit")
-        end,
-    }
-)
-
-vim.api.nvim_create_autocmd(
-    "BufWritePost",
-    {
-        pattern = "*.py",
-        group = "AutoFormat",
-        callback = function()
-            vim.cmd("Isort")
-            vim.cmd("edit")
-        end,
-    }
-)
-
-local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*.go",
-  callback = function()
-   require('go.format').goimport()
-  end,
-  group = format_sync_grp,
-})
