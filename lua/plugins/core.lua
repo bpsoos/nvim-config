@@ -1,13 +1,13 @@
 return {
-    { 'hrsh7th/nvim-cmp' },
-    { 'hrsh7th/cmp-nvim-lsp' },
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v4.x',
     },
-    { 'neovim/nvim-lspconfig' },
-    { 'williamboman/mason.nvim' },
-    { 'williamboman/mason-lspconfig.nvim' },
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
@@ -23,6 +23,7 @@ return {
                     "html",
                     "python",
                     "go",
+                    "typescript",
                 },
                 sync_install = false,
                 highlight = { enable = true },
