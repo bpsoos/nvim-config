@@ -31,4 +31,12 @@ vim.g.have_nerd_font = true
 
 vim.lsp.set_log_level("off")
 vim.g.python3_host_prog = vim.fn.expand('$HOME') .. '/.local/venv/nvim/bin/python'
-vim.cmd.colorscheme('catppuccin-mocha')
+vim.cmd.colorscheme('catppuccin-macchiato')
+
+vim.filetype.add({
+  extension = {
+    templ = "go",
+    mjs = "javascript"
+  }
+})
+

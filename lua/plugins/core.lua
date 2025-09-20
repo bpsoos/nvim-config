@@ -8,6 +8,8 @@ return {
     {'neovim/nvim-lspconfig'},
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/nvim-cmp'},
+    {'NoahTheDuke/vim-just'},
+    {'IndianBoy42/tree-sitter-just'},
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
@@ -19,6 +21,7 @@ return {
                     "lua",
                     "vim",
                     "vimdoc",
+                    "templ",
                     "javascript",
                     "html",
                     "python",

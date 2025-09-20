@@ -23,7 +23,6 @@ lsp_zero.extend_lspconfig({
     capabilities = capabilities,
 })
 
-local lspconfig = require('lspconfig')
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {
@@ -37,16 +36,18 @@ require('mason-lspconfig').setup({
         "svelte",
         "eslint",
         "html",
+        "htmx",
         "cssls",
         "pyright",
         "ruff",
+        "graphql",
     },
     handlers = {
         function(server)
-            lspconfig[server].setup({})
+            vim.lsp.config(server, {})
         end,
         ["ts_ls"] = function()
-            lspconfig.ts_ls.setup({
+            vim.lsp.config("ts_ls", {
                 settings = {
                     completions = {
                         completeFunctionCalls = true,
@@ -59,12 +60,15 @@ require('mason-lspconfig').setup({
 
 
 
-lspconfig.lua_ls.setup({
+vim.lsp.config("lua_ls", {
     on_init = function(client)
         lsp_zero.nvim_lua_settings(client, {})
     end,
 })
-lspconfig.ts_ls.setup({
+
+vim.lsp.config("htmx", {
+    capabilities = capabilities,
+    filetypes = { "html", "templ" },
 })
 
 
