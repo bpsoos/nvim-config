@@ -27,7 +27,6 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {
         "gopls",
-        "golangci_lint_ls",
         "lua_ls",
         "ts_ls",
         "templ",
@@ -58,6 +57,11 @@ require('mason-lspconfig').setup({
     },
 })
 
+vim.lsp.config("gopls", {
+  cmd_env = {
+    GOEXPERIMENT = "jsonv2",
+  },
+})
 
 
 vim.lsp.config("lua_ls", {
