@@ -29,7 +29,7 @@ vim.opt.list = true
 
 vim.g.have_nerd_font = true
 
-vim.lsp.set_log_level("off")
+vim.lsp.log.set_level("off")
 vim.g.python3_host_prog = vim.fn.expand('$HOME') .. '/.local/venv/nvim/bin/python'
 vim.cmd.colorscheme('catppuccin-macchiato')
 
